@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This defines the visual appearance of the bubble -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- The main color of the bubble -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Padding inside the bubble, between the edge and the text -->
+    <padding
+        android:left="10dp"
+        android:top="5dp"
+        android:right="10dp"
+        android:bottom="5dp" />
+
+    <!-- This makes the corners rounded -->
+    <corners android:radius="16dp" />
+
+</shape>
