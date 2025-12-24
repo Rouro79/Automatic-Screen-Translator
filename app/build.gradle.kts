@@ -60,12 +60,6 @@ dependencies {
     implementation(libs.androidx.camera.view)
     implementation(libs.kotlinx.coroutines.play.services)
     implementation("org.opencv:opencv:4.9.0")
-    implementation("androidx.lifecycle:lifecycle-service:2.8.0") // Use the latest stable version
-    implementation ("androidx.lifecycle:lifecycle-service:2.8.0") // Use the latest stable versio
-    implementation ("com.google.android.gms:play-services-mlkit-text-recognition:18.1.0")
-    implementation ("com.google.android.gms:play-services-mlkit-text-recognition:16.0.0")
-    implementation ("androidx.window:window:1.2.0")
-    implementation(libs.play.services.mlkit.text.recognition)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

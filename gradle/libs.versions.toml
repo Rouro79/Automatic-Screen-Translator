@@ -20,7 +20,6 @@ cameraView = "1.5.1"
 kotlinxCoroutinesPlayServices = "1.10.2"
 opencv = "4.9.0"
 opencvAndroid = "4.9.0"
-playServicesMlkitTextRecognition = "19.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -49,7 +48,6 @@ androidx-camera-view = { group = "androidx.camera", name = "camera-view", versio
 kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "kotlinxCoroutinesPlayServices" }
 opencv = { group = "com.quickbirdstudios", name = "opencv", version.ref = "opencv" }
 opencv-android = { group = "com.github.quickbirdstudios", name = "opencv-android", version.ref = "opencvAndroid" }
-play-services-mlkit-text-recognition = { group = "com.google.android.gms", name = "play-services-mlkit-text-recognition", version.ref = "playServicesMlkitTextRecognition" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

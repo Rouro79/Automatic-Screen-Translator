@@ -1,17 +1,12 @@
-package com.example.comictranslate
+package com.example.comictranslate // Use your app's package name
 
 import android.app.Application
 import org.opencv.android.OpenCVLoader
 
 class MyApplication : Application() {
-
     override fun onCreate() {
         super.onCreate()
-
-        if (!OpenCVLoader.initDebug()) {
-            println("OpenCV load failed")
-        } else {
-            println("OpenCV loaded successfully")
-        }
+        // Initialize OpenCV
+        OpenCVLoader.initDebug()
     }
 }

@@ -2,18 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Foreground service permissions -->
+    <!-- Permissions required for the app -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!--
+        This permission is MANDATORY for mediaProjection foreground services on Android 14+
+        The self-closing tag "/>" is required.
+    -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
 
-    <!-- Overlay -->
+    <!-- Permission to draw overlays on other apps -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
-    <!-- Internet (ML Kit model downloads, logging, etc.) -->
+    <!-- Permission for translation models -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
-        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,7 +27,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ComicTranslate"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:name=".MyApplication">
 
         <activity
             android:name=".MainActivity"
@@ -34,10 +40,12 @@
             </intent-filter>
         </activity>
 
+        <!--
+            Service definition with the required foregroundServiceType attribute
+        -->
         <service
             android:name=".ScreenCaptureService"
             android:exported="false"
-            android:enabled="true"
             android:foregroundServiceType="mediaProjection" />
     </application>
 
